@@ -1,5 +1,4 @@
 package org.advanceit.calcv2.template;
-
 import java.util.Arrays;
 
 import org.springframework.boot.SpringApplication;
@@ -8,6 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.advanceit.calcv2.template.quote.bo.QuoteCalculator;
+import org.apache.log4j.Logger;
 
 /**
  * Application class
@@ -25,7 +26,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ComponentScan
 public class Application {
 	
+	public static final Logger log = Logger.getLogger(Application.class);
+	
     public static void main(String[] args) {
+    	
+    	log.info("Application");
     	
         ApplicationContext ctx = SpringApplication.run(new Object[]{Application.class, AppConfiguration.class}, args);
 
