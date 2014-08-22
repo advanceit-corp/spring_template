@@ -25,12 +25,15 @@ public class Quote {
 	public String getId() {
 		return id;
 	}
+	
 	public void setId(String id) {
 		this.id = id;
 	}
+	
 	public double getAmt() {
 		return amt;
 	}
+	
 	public void setAmt(double amt) {
 		this.amt = amt;
 	}
