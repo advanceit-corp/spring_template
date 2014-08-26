@@ -146,6 +146,7 @@
 		    <artifactId>log4j</artifactId>
 		    <version>1.2.17</version>
 		</dependency>       
+		
 	</dependencies>
     <build>
         <plugins>
@@ -184,5 +185,6 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>
+    </build>    
+    
 </project>
