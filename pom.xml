@@ -34,6 +34,23 @@
 			<version>4.0.6.RELEASE</version>
 		</dependency>
 				
+		<!-- Spring security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>3.2.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>3.2.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>3.2.5.RELEASE</version>
+		</dependency>
+		
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -146,7 +163,6 @@
 		    <artifactId>log4j</artifactId>
 		    <version>1.2.17</version>
 		</dependency>       
-		
 	</dependencies>
     <build>
         <plugins>
@@ -185,6 +201,6 @@
                 </configuration>
             </plugin>
         </plugins>
-    </build>    
-    
+    </build>
 </project>
+>>>>>>> 31ca903f56e4e092163de79e24943ee24cd5fbca

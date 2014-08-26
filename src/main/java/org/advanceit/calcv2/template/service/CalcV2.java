@@ -26,17 +26,18 @@ public class CalcV2 {
 	 * @param       double subtractedAmt - the amount that will be a part of calculation for the quote
 	 * @return      Quote object
 	*/
-	@RequestMapping("/calc")
-	public Quote getLapster(@RequestParam(value="subtractedAmt", required=false, defaultValue="0.0") double subtractedAmt) {
+	@RequestMapping("/calcV2")
+	public Quote getLapster(@RequestParam(value="subtractedAmt", required=false, defaultValue="0.0") double subtractedAmt, 
+							@RequestParam(value="addAmt", required=false, defaultValue="0.0") double addAmt) {
 		try{
 			QuoteCalculator qc = new QuoteCalculator();			
 			
 			Application.log.info("calcv2 from Application");
 			
-		    return qc.calculateQuote(subtractedAmt);
+		    return qc.calculateQuote(subtractedAmt - addAmt);
 		} catch (Exception ex) {
 			System.out.println("Smth went wrong");
-			return null;
+			return new Quote();
 		}
 	}
 	

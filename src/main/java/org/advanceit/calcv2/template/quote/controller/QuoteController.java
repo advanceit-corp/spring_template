@@ -64,7 +64,7 @@ public class QuoteController {
 	@RequestMapping(value = "/quote/{id}", method=RequestMethod.GET)
 	public Quote getQuote(@PathVariable String id) {
 		
-		if(qtsMap.get(id) == null) throw new QuoteNotFoundException("2", "No such Quote !");;// 
+		if(qtsMap.get(id) == null) throw new QuoteNotFoundException("2", "No such Quote !");// 
 		
 		return qtsMap.get(id);
 	}
