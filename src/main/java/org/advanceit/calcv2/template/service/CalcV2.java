@@ -1,5 +1,6 @@
 package org.advanceit.calcv2.template.service;
 
+import org.advanceit.calcv2.template.Application;
 import org.advanceit.calcv2.template.quote.bo.QuoteCalculator;
 import org.advanceit.calcv2.template.quote.model.Quote;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,7 +30,9 @@ public class CalcV2 {
 	public Quote getLapster(@RequestParam(value="subtractedAmt", required=false, defaultValue="0.0") double subtractedAmt, 
 							@RequestParam(value="addAmt", required=false, defaultValue="0.0") double addAmt) {
 		try{
-			QuoteCalculator qc = new QuoteCalculator();
+			QuoteCalculator qc = new QuoteCalculator();			
+			
+			Application.log.info("calcv2 from Application");
 			
 		    return qc.calculateQuote(subtractedAmt - addAmt);
 		} catch (Exception ex) {
