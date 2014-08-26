@@ -27,7 +27,7 @@ public class Application {
 	
     public static void main(String[] args) {
     	
-        ApplicationContext ctx = SpringApplication.run(new Object[]{Application.class, AppConfiguration.class}, args);
+        ApplicationContext ctx = SpringApplication.run(new Object[]{Application.class, AppConfiguration.class, SecurityConfig.class}, args);
 
         String[] beanNames = ctx.getBeanDefinitionNames();
         Arrays.sort(beanNames);
@@ -35,5 +35,4 @@ public class Application {
             System.out.println(beanName);
         }
     }
-
 }
